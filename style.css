@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+::selection{
+    background-color:  rgb(189, 149, 128);
+}
+
+body{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+p,h1,h2,h3,h4,h5,h6,a,li{
+    margin-top: 0;
+}
+
+p, a{
+    font-size:18px ;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-size: 2em;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+h3{
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+h4{
+    font-size: 1.6em;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+h5{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h6{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+li{
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:#2B456E;
+}
+
+a:hover{
+    color:#0D0D11;
+}
+
+a:visited{
+    color: #D37879;
+}
+
+header{
+    background-image: url(images/Personaje.svg);
+    background-size: cover;
+    background-position-y: 80%;
+    background-attachment: fixed;
+    min-height: 100VH;
+    position: relative;
+}
+
+header nav{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #2b456e;
+    z-index: 1;
+}
+
+header nav ul{
+    margin:0;
+}
+
+header nav li{
+    list-style: none;
+    display: inline-block;
+    padding: 1em 0;
+    margin: 0;
+}
+
+header nav li a:hover{
+    background-color:#efe5e5 ;
+    color:#2b456e;
+}
+
+nav li a{
+    color:#efe5e5;
+    padding:1em;
+    margin:0;   
+}
+
+nav a:visited{
+    color: #efe5e5;
+}
+
+blockquote{
+    background-color: #2b456eba;
+    max-width: 300px;
+    padding: 4em;
+    margin:0;
+    font-size: 2em;
+    color: rgb(255, 248, 240);
+    position:absolute;
+    top:25%;
+    transform: translateX(50%);
+}
+
+blockquote span{
+    font-size: 1.4em;
+}
+
+main{
+    background-color: rgb(189, 149, 128);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#info-personal{
+    background-color: rgb(213, 206, 189);
+    padding:4em 2em 0;
+    width: 30%;
+    padding-top: 10em;
+    margin-right: 1em;
+    position: relative;
+}
+
+#info-personal div{
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+#info-personal>img{
+    max-width: 75%;
+    position: absolute;
+    border: solid 1em rgb(189, 149, 128);
+    border-radius: 50%;
+    top:-10%;
+    left: 60%;
+}
+
+#info-personal div div{
+     display: flex;
+     align-content: center;
+     margin-bottom: 30px;
+}
+
+i.email{
+    content: url(images/email.png);
+    width: 30px;
+    filter: grayscale();
+}
+
+#info-personal div div h5, #info-personal div div a{
+margin-bottom:0;
+padding-left:0.5em;
+font-weight: 500;
+}
+
+#info-personal div div a{
+    line-height: 1.8em;
+}
+
+
+#info-personal div img{
+    max-width: 30px;
+}
+
+#experiencia{
+    background-color: rgb(255, 248, 240);
+    padding:10em 2em 0;    
+    width:65%;
+}
+
+section{
+    padding-bottom: 4em;
+}
+
+
+/* Sección Herramientas */
+section#herramientas div{
+    column-count: 2;
+}
