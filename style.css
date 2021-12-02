@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 ::selection{
     background-color:  rgb(189, 149, 128);
+}
+html{
+    scroll-behavior:smooth;  
 }
 
 body{
@@ -24,7 +28,7 @@ p, a{
 h2{
     font-size: 2em;
     font-family: 'Work Sans', sans-serif;
-    
+    color:#2b456e;    
 }
 
 h3{
@@ -42,6 +46,11 @@ h5{
     font-size: 1.2em;
     margin-bottom: 20px;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+div h5:first-of-type:not(ul li h5),ul li:first-of-type h5 {
+    font-weight: 700;
 }
 
 h6{
@@ -58,14 +67,17 @@ li{
 a{
     text-decoration: none;
     color:#2B456E;
-}
-
-a:hover{
-    color:#0D0D11;
+    transition: 0.4s;
 }
 
 a:visited{
     color: #D37879;
+    transition: 0.4s;
+}
+
+a:hover{
+    color:#0D0D11;
+    transition: 0.4s;
 }
 
 header{
@@ -104,7 +116,7 @@ header nav li a:hover{
 nav li a{
     color:#efe5e5;
     padding:1em;
-    margin:0;   
+    margin:0;
 }
 
 nav a:visited{
@@ -112,15 +124,18 @@ nav a:visited{
 }
 
 blockquote{
-    background-color: #2b456eba;
-    max-width: 300px;
-    padding: 4em;
-    margin:0;
-    font-size: 2em;
-    color: rgb(255, 248, 240);
     position:absolute;
     top:25%;
     transform: translateX(50%);
+    width: 20%;
+    max-width: 300px;
+    padding: 3em;
+    margin:0;
+    border-radius: 2em;
+    background-color: #2b456eba;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(255, 248, 240);
 }
 
 blockquote span{
@@ -128,72 +143,128 @@ blockquote span{
 }
 
 main{
-    background-color: rgb(189, 149, 128);
+    background-color: #2b456e;
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 3.3em;
 }
 
 #info-personal{
-    background-color: rgb(213, 206, 189);
-    padding:4em 2em 0;
+    background-color: #83A3A3;
     width: 30%;
-    padding-top: 10em;
+    padding:10em 2em 0;
     margin-right: 1em;
     position: relative;
+    border-radius: 3em 0 0;
 }
 
 #info-personal div{
-    overflow: hidden;
+
     overflow-wrap: break-word;
 }
 
-#info-personal>img{
-    max-width: 75%;
-    position: absolute;
-    border: solid 1em rgb(189, 149, 128);
+#info-personal div:first-child {
+    
+    background-color: #2b456e;
     border-radius: 50%;
+    position: absolute;
     top:-10%;
-    left: 60%;
+    left: 55%;
+    width: 90%;
+}
+#info-personal div:first-child img{
+    max-width: 92%;
+    border-radius: 50%;
+    transition: 0.4s;
+    padding: 4%;
+    z-index: 1;
+    position: relative;
+}
+#info-personal div:first-child img:hover{
+    opacity: 0.01%;
+    transition: 0.4s;
 }
 
-#info-personal div div{
-     display: flex;
-     align-content: center;
-     margin-bottom: 30px;
+#info-personal div:first-child p{
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left: 12%;
+    color:#ffffff;
+    font-size: 1.4em;
+    display: none;
+    user-select: none; 
+    z-index: 0;
+}
+
+#info-personal div:first-child img:hover + p{
+    display: initial;
+}
+
+i{
+    width: 30px;
+    transition: 0.4s;
+    padding-right: 0.5em;
+}
+
+i:hover{
+    filter:invert();
+    transition: 0.4s;
 }
 
 i.email{
     content: url(images/email.png);
-    width: 30px;
-    filter: grayscale();
 }
 
-#info-personal div div h5, #info-personal div div a{
-margin-bottom:0;
-padding-left:0.5em;
-font-weight: 500;
+i.localizacion{
+    content: url(images/ubicacion.png);
 }
 
-#info-personal div div a{
+i.llamada{
+    content: url(images/llamada.png);
+}
+
+i.linkedin{
+    content: url(images/linkedin.png);
+}
+
+ #info-personal div:nth-of-type(2) a{
+    margin-bottom:30px;
+    font-weight: 500;
+    color: #0D0D11;
+    display: flex;
+    align-items: center;
     line-height: 1.8em;
 }
 
+#info-personal div:nth-of-type(2) a:visited{
+    color:#0D0D11;
+}
+
+#info-personal div:nth-of-type(2) a:hover{
+    color:#ffffff;
+}
 
 #info-personal div img{
     max-width: 30px;
 }
 
-#experiencia{
+#info-laboral{
     background-color: rgb(255, 248, 240);
-    padding:10em 2em 0;    
+    padding:6em 2em 0;    
     width:65%;
+    border-radius: 0 3em 0 0;
 }
 
 section{
+    padding-top: 4em;
+}
+
+#info-laboral section:last-of-type{
     padding-bottom: 4em;
 }
 
