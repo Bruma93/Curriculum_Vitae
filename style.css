@@ -212,7 +212,7 @@ i{
 }
 
 i:hover{
-    filter:invert();
+    filter:invert(1);
     transition: 0.4s;
 }
 
